@@ -2,7 +2,7 @@ import { presentationGallery } from '@/data/projects'
 
 export const metadata = {
   title: 'Présentation - Eric Sartre Architecte, Drôme, Eco Construction',
-  description: 'Depuis 2001, je façonne des projets architecturaux en Drôme, alliant créativité et respect de l’environnement. Spécialisé en éco construction, ma pratique privilégie l’usage des matériaux naturels tel le bois, la paille, la terre et autres matériaux biosourcés...',
+  description: 'Depuis 2001, je façonne des projets architecturaux en Drôme, alliant créativité et respect de l’environnement. Spécialisé en éco construction, ma pratique privilégie l’usage des matériaux naturels tel le bois, la paille, la terre et autres matériaux biosourcés... ',
 }
 
 export default function PresentationPage() {

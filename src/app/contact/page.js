@@ -110,14 +110,14 @@ export default function ContactPage() {
               <div className="mt-6 bg-white rounded-lg shadow-sm overflow-hidden">
                 <div className="aspect-video relative">
                   <iframe
-                    src="https://www.openstreetmap.org/export/embed.html?bbox=5.1%2C44.7%2C5.2%2C44.75&layer=mapnik&marker=44.723%2C5.145"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=5.05%2C44.68%2C5.13%2C44.74&layer=mapnik&marker=44.71115%2C5.08937"
                     className="w-full h-full border-0"
                     loading="lazy"
                     title="Localisation Eric Sartre Architecte - Mirabel & Blacons, Drôme"
                   />
                 </div>
                 <a 
-                  href="https://www.openstreetmap.org/?mlat=44.723&mlon=5.145#map=13/44.723/5.145"
+                  href="https://www.openstreetmap.org/?mlat=44.71115&mlon=5.08937#map=16/44.71115/5.08937"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 py-3 px-4 bg-primary/5 text-primary text-sm hover:bg-primary/10 transition-colors"

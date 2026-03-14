@@ -22,76 +22,85 @@ export default function PresentationPage() {
             {/* Introduction */}
             <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
               <h2 className="font-heading text-2xl text-primary mb-6">
-                Architecte dans la Drôme depuis 2001
+                Concevoir avec le lieu, construire pour demain
               </h2>
               
               <div className="prose prose-lg text-text-light space-y-6">
                 <p>
-                  <strong className="text-text">9 années d'exercice au sein de la société SCOP HABITERRE</strong>, 
-                  atelier d'architecture écologique, aujourd'hui indépendant.
+                  Depuis 2001, je façonne des projets architecturaux en Drôme, alliant créativité et respect 
+                  de l'environnement. Spécialisé en <strong className="text-eco-dark">éco construction</strong>, ma pratique 
+                  privilégie l'usage des matériaux naturels tel le bois, la paille, la terre et autres matériaux biosourcés.
                 </p>
+
+                <h3 className="font-heading text-xl text-primary mt-8 mb-4">
+                  Mon approche
+                </h3>
                 
                 <p>
-                  Une expérience dans le domaine de la <strong className="text-eco-dark">construction écologique</strong> en 
-                  maison individuelle neuve, la réhabilitation de bâti ancien, de l'habitat groupé et petit collectif, des 
-                  projets de bâtiments professionnels et bureaux, de la commande publique comme privée.
+                  Chaque projet naît d'une écoute attentive, vos besoins, vos aspirations et du site lui-même. 
+                  Mon rôle est de transformer ces éléments en une proposition architecturale cohérente, adaptée 
+                  et convaincante, où le bâti dialogue avec son environnement.
                 </p>
 
                 <div className="border-l-4 border-eco pl-6 my-8">
                   <p className="italic">
-                    C'est à partir de l'examen de votre programme, de vos intentions, du « site », 
-                    que l'architecte tricote un projet en lui donnant forme et orientation. Le chemin s'avère 
-                    complexe mais au final la proposition doit se révéler au maitre d'ouvrage.
+                    Il s'agit de construire, mais également de révéler le potentiel d'un lieu et d'y inscrire 
+                    une réponse à la fois esthétique et responsable.
                   </p>
                 </div>
 
-                <p>
-                  Il s'agit bien de faire coïncider le projet avec l'identité d'un lieu avec toutes les nuances 
-                  de qualités qu'il possède et ainsi faire contribuer le projet à son appréciation, la réponse de 
-                  l'architecte doit être adaptée et surtout convaincante.
-                </p>
+                <h3 className="font-heading text-xl text-primary mt-8 mb-4">
+                  Engagement écologique
+                </h3>
 
                 <p>
-                  Le projet doit être à la "hauteur" de son environnement et par conséquent être respectueux de ce dernier, 
-                  c'est pourquoi qu'au-delà de la réglementation thermique en vigueur, l'utilisation des matériaux à faible énergie grise sera privilégiée.
-                </p>
-                
-                <p>
-                  Cette proposition lui permettra de s'inscrire dans son époque, sur le fond comme sur la forme avec une cohérence et des perspectives constructives.
-                </p>
-                
-                <p>
-                  L'architecte doit avec son énergie et son enthousiasme être capable de relever ce défi, concrétiser l'élan initial, 
-                  rendre possible ce qui n'est au départ qu'une intention et réussir à instaurer un rapport juste, entre les usagers, la construction et notre environnement.
+                  Je privilégie les matériaux à faible énergie grise, des solutions durables, pour des projets 
+                  qui s'inscrivent dans leur époque sans compromettre l'avenir. L'objectif ? Créer des espaces 
+                  qui respectent leur environnement, tout en répondant aux attentes des usagers.
                 </p>
 
                 <h3 className="font-heading text-xl text-primary mt-8 mb-4">
-                  Compétences et spécialités
+                  Ma philosophie
                 </h3>
+                
+                <p>
+                  L'architecture est un acte engagé. Avec énergie et enthousiasme, je relève le défi de concrétiser 
+                  vos intentions, en instaurant un équilibre juste entre usagers, construction et environnement. 
+                  Mon ambition ? Rendre possible ce qui n'est, au départ, qu'une idée — et en faire une réalité 
+                  durable, harmonieuse et inspirante.
+                </p>
+
+                <h3 className="font-heading text-xl text-primary mt-8 mb-4">
+                  Domaines d'intervention
+                </h3>
+
+                <p className="mb-4">
+                  Tous projets, neuf ou réhabilitation, rénovation énergétique, individuel ou collectif, professionnel...
+                </p>
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="bg-background p-4 rounded">
                     <h4 className="font-medium text-primary mb-2">Construction neuve</h4>
                     <p className="text-sm">
-                      Ossature bois, isolation paille, enduits terre, toiture végétalisée
+                      Ossature bois, isolation paille, enduits terre, matériaux biosourcés
                     </p>
                   </div>
                   <div className="bg-background p-4 rounded">
                     <h4 className="font-medium text-primary mb-2">Réhabilitation</h4>
                     <p className="text-sm">
-                      Rénovation énergétique, respect du bâti ancien, extensions contemporaines
+                      Rénovation énergétique, respect du bâti ancien, extensions
                     </p>
                   </div>
                   <div className="bg-background p-4 rounded">
-                    <h4 className="font-medium text-primary mb-2">Habitat participatif</h4>
+                    <h4 className="font-medium text-primary mb-2">Individuel ou collectif</h4>
                     <p className="text-sm">
-                      Conception collaborative, espaces partagés, éco-hameaux
+                      Maison individuelle, habitat groupé, petit collectif
                     </p>
                   </div>
                   <div className="bg-background p-4 rounded">
-                    <h4 className="font-medium text-primary mb-2">Bâtiments professionnels</h4>
+                    <h4 className="font-medium text-primary mb-2">Professionnel</h4>
                     <p className="text-sm">
-                      Bureaux, ateliers, locaux commerciaux, équipements publics
+                      Bureaux, ateliers, commande publique et privée
                     </p>
                   </div>
                 </div>

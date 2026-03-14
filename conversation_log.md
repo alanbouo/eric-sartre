@@ -1,5 +1,127 @@
 # Conversation Log - Eric Sartre Architecte Website
 
+## Session: 2026-03-14 01:04 UTC+01:00
+
+### User Request
+Analyse des 23 images dans `public/images/assets` et intégration sur le site web.
+
+### Analyse des images
+
+| Image | Description | Utilisation |
+|-------|-------------|-------------|
+| IMG_0329D0CB5B8D-1 | Habitat groupé terrasses bois | Projets - Collectif |
+| IMG_0329D0CB5B8D-2 | Extension bois grise | Projets - Réhabilitation |
+| IMG_0329D0CB5B8D-3 | Extension avec terrasse | Projets - Réhabilitation |
+| IMG_0329D0CB5B8D-4 | Extension bardage vertical | Projets - Réhabilitation |
+| IMG_0329D0CB5B8D-5 | Maison contemporaine blanche | Projets - Individuel |
+| IMG_0329D0CB5B8D-6 | Maison vue montagnes | **Hero Slider** |
+| IMG_0329D0CB5B8D-7 | Maison paysage automnal | **Hero Slider** |
+| IMG_0329D0CB5B8D-8 | Maison ossature bois 2 étages | Projets - Individuel |
+| IMG_0329D0CB5B8D-9 | Rendu 3D végétalisé | Non utilisé |
+| IMG_0329D0CB5B8D-10 | Rendu 3D collectif | Non utilisé |
+| IMG_0329D0CB5B8D-11 | Charpente bois/métal | Présentation - Galerie |
+| IMG_0329D0CB5B8D-12 | Maison avec piscine | Projets - Individuel |
+| IMG_0329D0CB5B8D-13 | Mur terre crue | Présentation - Galerie |
+| IMG_0329D0CB5B8D-14 | Maison terrasse vallée | **Hero Slider** |
+| IMG_0329D0CB5B8D-15 | Ossature bois intérieur | Présentation - Galerie |
+| IMG_0329D0CB5B8D-16 | Maison balcons colorés | Projets - Individuel |
+| IMG_0329D0CB5B8D-17 | Maison terre/bois/pierre | Projets - Individuel |
+| IMG_0329D0CB5B8D-18 | Construction paille | Présentation - Galerie |
+| IMG_0329D0CB5B8D-19 | Maison enduit terre | Projets - Individuel |
+| IMG_0329D0CB5B8D-20 | Bâtiment mixte | Projets - Professionnel |
+| IMG_0329D0CB5B8D-21 | Extension claire-voie | Projets - Réhabilitation |
+| IMG_0329D0CB5B8D-22 | Habitat groupé Habiterre | Projets - Collectif |
+| IMG_0329D0CB5B8D-23 | Détail habitat groupé | Projets - Collectif |
+
+### Actions Effectuées
+
+#### Fichiers modifiés:
+
+**1. `src/components/HeroSlider.js`**
+- Remplacement des images Unsplash par les vraies images locales
+- 3 images sélectionnées : IMG_0329D0CB5B8D-6, 7, 14 (vues panoramiques)
+
+**2. `src/data/projects.js`**
+- 16 projets avec images locales (au lieu de 12 avec Unsplash)
+- Catégories : rehabilitation (4), maison-individuelle (8), professionnel (1), habitat-groupe (3)
+- Galerie présentation : 8 images focus matériaux et chantiers
+
+```javascript
+// HeroSlider - Images locales
+const heroImages = [
+  { src: '/images/assets/IMG_0329D0CB5B8D-6.jpeg', alt: 'Maison contemporaine avec vue sur les montagnes' },
+  { src: '/images/assets/IMG_0329D0CB5B8D-7.jpeg', alt: 'Maison moderne intégrée dans le paysage drômois' },
+  { src: '/images/assets/IMG_0329D0CB5B8D-14.jpeg', alt: 'Maison bois avec terrasse et vue sur la vallée' },
+]
+
+// Galerie Présentation - Focus matériaux biosourcés
+export const presentationGallery = [
+  { id: 1, title: 'Construction paille', image: '/images/assets/IMG_0329D0CB5B8D-18.jpeg' },
+  { id: 2, title: 'Mur en terre crue', image: '/images/assets/IMG_0329D0CB5B8D-13.jpeg' },
+  { id: 3, title: 'Charpente bois', image: '/images/assets/IMG_0329D0CB5B8D-11.jpeg' },
+  // ...
+]
+```
+
+---
+
+## Session: 2026-03-14 00:54 UTC+01:00
+
+### User Request
+Mise à jour du contenu du site web avec un nouveau texte de présentation fourni par l'utilisateur.
+
+### Texte fourni
+- **Titre principal**: "Eric Sartre, Architecte en Drôme — Concevoir avec le lieu, construire pour demain"
+- **Introduction**: Depuis 2001, projets architecturaux en Drôme, éco construction, matériaux naturels (bois, paille, terre, biosourcés)
+- **Mon approche**: Écoute attentive, proposition architecturale cohérente, dialogue bâti/environnement
+- **Engagement écologique**: Matériaux à faible énergie grise, solutions durables
+- **Domaines d'intervention**: Tous projets, neuf ou réhabilitation, rénovation énergétique, individuel ou collectif, professionnel
+- **Ma philosophie**: Architecture engagée, équilibre usagers/construction/environnement
+
+### Actions Effectuées
+
+#### Fichiers modifiés:
+
+**1. `src/app/page.js` (Page d'accueil)**
+- Nouveau titre: "Concevoir avec le lieu, construire pour demain"
+- Nouveau texte d'introduction avec mention des matériaux biosourcés
+- Section "Domaines d'intervention" mise à jour avec sous-titre descriptif
+- Catégories simplifiées: Neuf, Réhabilitation, Individuel ou collectif, Professionnel
+- Section CTA mise à jour avec la philosophie
+
+**2. `src/app/presentation/page.js` (Page Présentation)**
+- Nouveau titre principal: "Concevoir avec le lieu, construire pour demain"
+- Sections restructurées: Mon approche, Engagement écologique, Ma philosophie, Domaines d'intervention
+- Citation mise en valeur: "Il s'agit de construire, mais également de révéler le potentiel d'un lieu..."
+- Grille des domaines d'intervention mise à jour
+
+```javascript
+// Extrait des modifications - page.js (accueil)
+<h2 className="section-title mx-auto">
+  Concevoir avec le lieu, construire pour demain
+</h2>
+<p className="mt-8 text-lg text-text-light leading-relaxed">
+  Depuis 2001, je façonne des projets architecturaux en Drôme, alliant créativité 
+  et respect de l'environnement. Spécialisé en éco construction, ma pratique privilégie 
+  l'usage des matériaux naturels tel le bois, la paille, la terre et autres matériaux biosourcés.
+</p>
+```
+
+```javascript
+// Extrait des modifications - presentation/page.js
+<h3 className="font-heading text-xl text-primary mt-8 mb-4">
+  Ma philosophie
+</h3>
+<p>
+  L'architecture est un acte engagé. Avec énergie et enthousiasme, je relève le défi de concrétiser 
+  vos intentions, en instaurant un équilibre juste entre usagers, construction et environnement. 
+  Mon ambition ? Rendre possible ce qui n'est, au départ, qu'une idée — et en faire une réalité 
+  durable, harmonieuse et inspirante.
+</p>
+```
+
+---
+
 ## Session: 2025-12-31 09:42 UTC+01:00
 
 ### User Request

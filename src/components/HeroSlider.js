@@ -2,19 +2,19 @@
 
 import { useState, useEffect, useCallback } from 'react'
 
-// Images placeholder pour le slider (en attendant les vraies images)
+// Images du slider - Projets Eric Sartre Architecte
 const heroImages = [
   {
-    src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1470&auto=format&fit=crop',
-    alt: 'Construction bois et paille - Architecture écologique',
+    src: '/images/assets/IMG_0329D0CB5B8D-6.jpeg',
+    alt: 'Maison contemporaine avec vue sur les montagnes - Architecture écologique',
   },
   {
-    src: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1475&auto=format&fit=crop',
-    alt: 'Maison passive en bois - Éco-construction',
+    src: '/images/assets/IMG_0329D0CB5B8D-7.jpeg',
+    alt: 'Maison moderne intégrée dans le paysage drômois',
   },
   {
-    src: 'https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?q=80&w=1470&auto=format&fit=crop',
-    alt: 'Habitat groupé écologique',
+    src: '/images/assets/IMG_0329D0CB5B8D-14.jpeg',
+    alt: 'Maison bois avec terrasse et vue sur la vallée',
   },
 ]
 

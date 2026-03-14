@@ -12,13 +12,12 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="section-title mx-auto">
-              Architecture Écologique
+              Concevoir avec le lieu, construire pour demain
             </h2>
             <p className="mt-8 text-lg text-text-light leading-relaxed">
-              Architecte dans la Drôme depuis 2001, spécialisé en éco-construction. 
-              Une approche respectueuse de l'environnement utilisant des matériaux 
-              naturels : bois, paille, terre, pierre. De la maison individuelle 
-              à l'habitat groupé, en passant par la réhabilitation du bâti ancien.
+              Depuis 2001, je façonne des projets architecturaux en Drôme, alliant créativité 
+              et respect de l'environnement. Spécialisé en éco construction, ma pratique privilégie 
+              l'usage des matériaux naturels tel le bois, la paille, la terre et autres matériaux biosourcés.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
@@ -45,6 +44,9 @@ export default function Home() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-6">
           <h2 className="section-title">Domaines d'intervention</h2>
+          <p className="mt-4 text-center text-text-light max-w-2xl mx-auto">
+            Tous projets, neuf ou réhabilitation, rénovation énergétique, individuel ou collectif, professionnel...
+          </p>
           
           <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Service 1 */}
@@ -54,7 +56,7 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                 </svg>
               </div>
-              <h3 className="font-heading font-medium text-primary mb-2">Maison individuelle</h3>
+              <h3 className="font-heading font-medium text-primary mb-2">Neuf</h3>
               <p className="text-sm text-text-light">
                 Construction neuve en matériaux écologiques, conception bioclimatique
               </p>
@@ -64,12 +66,12 @@ export default function Home() {
             <div className="text-center p-6">
               <div className="w-16 h-16 mx-auto mb-4 bg-eco-light/20 rounded-full flex items-center justify-center">
                 <svg className="w-8 h-8 text-eco" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
                 </svg>
               </div>
-              <h3 className="font-heading font-medium text-primary mb-2">Habitat groupé</h3>
+              <h3 className="font-heading font-medium text-primary mb-2">Réhabilitation</h3>
               <p className="text-sm text-text-light">
-                Projets participatifs, petit collectif, éco-hameaux
+                Rénovation du bâti ancien, extension, rénovation énergétique
               </p>
             </div>
 
@@ -77,12 +79,12 @@ export default function Home() {
             <div className="text-center p-6">
               <div className="w-16 h-16 mx-auto mb-4 bg-eco-light/20 rounded-full flex items-center justify-center">
                 <svg className="w-8 h-8 text-eco" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
               </div>
-              <h3 className="font-heading font-medium text-primary mb-2">Réhabilitation</h3>
+              <h3 className="font-heading font-medium text-primary mb-2">Individuel ou collectif</h3>
               <p className="text-sm text-text-light">
-                Rénovation du bâti ancien, extension, mise aux normes
+                Maison individuelle, habitat groupé, petit collectif
               </p>
             </div>
 
@@ -93,7 +95,7 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h3 className="font-heading font-medium text-primary mb-2">Bâtiments professionnels</h3>
+              <h3 className="font-heading font-medium text-primary mb-2">Professionnel</h3>
               <p className="text-sm text-text-light">
                 Bureaux, ateliers, commande publique et privée
               </p>
@@ -109,8 +111,9 @@ export default function Home() {
             Un projet d'éco-construction ?
           </h2>
           <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
-            Discutons ensemble de votre projet. De l'esquisse à la réalisation, 
-            je vous accompagne pour donner forme à vos intentions.
+            L'architecture est un acte engagé. Avec énergie et enthousiasme, je relève le défi 
+            de concrétiser vos intentions, en instaurant un équilibre juste entre usagers, 
+            construction et environnement.
           </p>
           <Link 
             href="/contact"

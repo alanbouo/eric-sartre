@@ -106,17 +106,28 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Map placeholder */}
-              <div className="mt-6 bg-white rounded-lg shadow-sm p-4">
-                <div className="aspect-video bg-gray-200 rounded flex items-center justify-center">
-                  <div className="text-center text-text-light">
-                    <svg className="w-12 h-12 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                    </svg>
-                    <p className="text-sm">Mirabel & Blacons, Drôme</p>
-                    {/* TODO: Intégrer une vraie carte (Google Maps, OpenStreetMap) */}
-                  </div>
+              {/* Map OpenStreetMap */}
+              <div className="mt-6 bg-white rounded-lg shadow-sm overflow-hidden">
+                <div className="aspect-video relative">
+                  <iframe
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=5.1%2C44.7%2C5.2%2C44.75&layer=mapnik&marker=44.723%2C5.145"
+                    className="w-full h-full border-0"
+                    loading="lazy"
+                    title="Localisation Eric Sartre Architecte - Mirabel & Blacons, Drôme"
+                  />
                 </div>
+                <a 
+                  href="https://www.openstreetmap.org/?mlat=44.723&mlon=5.145#map=13/44.723/5.145"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 py-3 px-4 bg-primary/5 text-primary text-sm hover:bg-primary/10 transition-colors"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  Voir sur OpenStreetMap
+                </a>
               </div>
             </div>
 

@@ -8,30 +8,39 @@ import { projects } from '@/data/projects'
 export default function ProjetsPage() {
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [currentProject, setCurrentProject] = useState(null)
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [currentProjectIndex, setCurrentProjectIndex] = useState(0)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
   const openLightbox = (project) => {
     const index = projects.findIndex(p => p.id === project.id)
     setCurrentProject(project)
-    setCurrentIndex(index)
+    setCurrentProjectIndex(index)
+    setCurrentImageIndex(0)
     setLightboxOpen(true)
   }
 
   const closeLightbox = () => {
     setLightboxOpen(false)
     setCurrentProject(null)
+    setCurrentImageIndex(0)
   }
 
-  const goToPrev = () => {
-    const newIndex = (currentIndex - 1 + projects.length) % projects.length
-    setCurrentIndex(newIndex)
+  const goToPrevProject = () => {
+    const newIndex = (currentProjectIndex - 1 + projects.length) % projects.length
+    setCurrentProjectIndex(newIndex)
     setCurrentProject(projects[newIndex])
+    setCurrentImageIndex(0)
   }
 
-  const goToNext = () => {
-    const newIndex = (currentIndex + 1) % projects.length
-    setCurrentIndex(newIndex)
+  const goToNextProject = () => {
+    const newIndex = (currentProjectIndex + 1) % projects.length
+    setCurrentProjectIndex(newIndex)
     setCurrentProject(projects[newIndex])
+    setCurrentImageIndex(0)
+  }
+
+  const handleImageChange = (imageIndex) => {
+    setCurrentImageIndex(imageIndex)
   }
 
   return (
@@ -77,14 +86,16 @@ export default function ProjetsPage() {
         </div>
       </section>
 
-      {/* Lightbox */}
+      {/* Lightbox with Gallery */}
       <Lightbox
         isOpen={lightboxOpen}
         onClose={closeLightbox}
-        image={currentProject?.image}
+        images={currentProject?.images}
+        currentImageIndex={currentImageIndex}
+        onImageChange={handleImageChange}
         title={currentProject ? `${currentProject.title} - ${currentProject.location}` : ''}
-        onPrev={goToPrev}
-        onNext={goToNext}
+        onPrevProject={goToPrevProject}
+        onNextProject={goToNextProject}
       />
     </div>
   )

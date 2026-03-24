@@ -9,7 +9,7 @@ const heroImages = [
     alt: 'Maison contemporaine avec vue sur les montagnes - Architecture écologique',
   },
   {
-    src: '/images/assets/IMG_0329D0CB5B8D-7.jpeg',
+    src: '/images/assets/IMG_0329D0CB5B8D-2.jpeg',
     alt: 'Maison moderne intégrée dans le paysage drômois',
   },
   {

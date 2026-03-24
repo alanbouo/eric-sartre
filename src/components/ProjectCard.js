@@ -29,7 +29,7 @@ export default function ProjectCard({ project, onClick }) {
       }}
     >
       <img
-        src={project.image}
+        src={project.images[0]}
         alt={project.title}
         loading="lazy"
       />

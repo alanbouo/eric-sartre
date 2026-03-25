@@ -10,18 +10,10 @@ export default function ContactPage() {
     subject: '',
     message: '',
   })
-  const [submitted, setSubmitted] = useState(false)
 
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // Avec Netlify Forms, le formulaire est géré automatiquement
-    // Pas besoin de rediriger vers mailto
-    setSubmitted(true)
   }
 
   return (
@@ -134,49 +126,29 @@ export default function ContactPage() {
             <div>
               <h2 className="font-heading text-xl text-primary mb-6">Formulaire de contact</h2>
               
-              {submitted ? (
-                <div className="bg-eco-light/20 border border-eco rounded-lg p-8 text-center">
-                  <svg className="w-16 h-16 mx-auto mb-4 text-eco" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <h3 className="font-heading text-lg text-primary mb-2">Message envoyé !</h3>
-                  <p className="text-text-light text-sm">
-                    Merci pour votre message. Je vous répondrai dans les meilleurs délais.
-                  </p>
-                  <button 
-                    onClick={() => setSubmitted(false)}
-                    className="mt-4 text-primary hover:text-eco underline text-sm"
-                  >
-                    Envoyer un autre message
-                  </button>
-                </div>
-              ) : (
-                <form 
-                  className="contact-form bg-white rounded-lg shadow-sm p-8 space-y-6"
-                  onSubmit={handleSubmit}
-                  name="contact"
-                  method="POST"
-                  data-netlify="true"
-                  netlify-honeypot="bot-field"
-                >
-                  {/* Honeypot field for spam protection (Netlify) */}
-                  <input type="hidden" name="bot-field" />
-                  <input type="hidden" name="form-name" value="contact" />
+              <form 
+                action="https://formspree.io/f/xojpqdkw"
+                method="POST"
+                className="contact-form bg-white rounded-lg shadow-sm p-8 space-y-6"
+              >
+                <input type="hidden" name="_replyto" value={formData.email} />
+                <input type="hidden" name="_subject" value={`Nouveau message de ${formData.name} - ${formData.subject || 'Contact'}`} />
+                <input type="hidden" name="_next" value="https://eric-sartre.vercel.app/contact?success=true" />
 
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-text mb-2">
-                      Nom <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      placeholder="Votre nom"
-                    />
-                  </div>
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-text mb-2">
+                    Nom <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    placeholder="Votre nom"
+                  />
+                </div>
 
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-text mb-2">
@@ -237,16 +209,15 @@ export default function ContactPage() {
                   </div>
 
                   <div className="pt-2">
-                    <button type="submit">
-                      Envoyer le message
-                    </button>
-                  </div>
+                  <button type="submit">
+                    Envoyer le message
+                  </button>
+                </div>
 
-                  <p className="text-xs text-text-light">
-                    Les champs marqués d'un <span className="text-red-500">*</span> sont obligatoires.
-                  </p>
-                </form>
-              )}
+                <p className="text-xs text-text-light">
+                  Les champs marqués d'un <span className="text-red-500">*</span> sont obligatoires.
+                </p>
+              </form>
 
             </div>
           </div>

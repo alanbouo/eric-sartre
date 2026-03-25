@@ -98,9 +98,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-medium text-text">Email</p>
-                    {/* TODO: Remplacer par la vraie adresse email */}
-                    <a href="mailto:contact@eric-sartre-architecte.fr" className="text-primary hover:text-eco transition-colors">
-                      contact@eric-sartre-architecte.fr
+                    <a href="mailto:sartre.eric@gmail.com" className="text-primary hover:text-eco transition-colors">
+                      sartre.eric@gmail.com
                     </a>
                   </div>
                 </div>

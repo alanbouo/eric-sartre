@@ -133,7 +133,7 @@ export default function ContactPage() {
               >
                 <input type="hidden" name="_replyto" value={formData.email} />
                 <input type="hidden" name="_subject" value={`Nouveau message de ${formData.name} - ${formData.subject || 'Contact'}`} />
-                <input type="hidden" name="_next" value="https://eric-sartre.vercel.app/contact?success=true" />
+                <input type="hidden" name="_next" value="https://www.sartre-architecte.fr/contact?success=true" />
 
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-text mb-2">

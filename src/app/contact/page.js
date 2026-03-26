@@ -127,13 +127,11 @@ export default function ContactPage() {
               <h2 className="font-heading text-xl text-primary mb-6">Formulaire de contact</h2>
               
               <form 
-                action="https://formspree.io/f/xojpqdkw"
+                action="https://usebasin.com/f/5fcab826c145"
                 method="POST"
                 className="contact-form bg-white rounded-lg shadow-sm p-8 space-y-6"
               >
-                <input type="hidden" name="_replyto" value={formData.email} />
-                <input type="hidden" name="_subject" value={`Nouveau message de ${formData.name} - ${formData.subject || 'Contact'}`} />
-                <input type="hidden" name="_next" value="https://www.sartre-architecte.fr/contact?success=true" />
+                <input type="hidden" name="_redirect" value="https://www.sartre-architecte.fr/contact?success=true" />
 
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-text mb-2">

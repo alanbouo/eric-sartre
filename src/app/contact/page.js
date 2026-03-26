@@ -1,10 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { useSearchParams } from 'next/navigation'
 
 export default function ContactPage() {
-  const searchParams = useSearchParams()
   const [showSuccess, setShowSuccess] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
@@ -15,10 +13,13 @@ export default function ContactPage() {
   })
 
   useEffect(() => {
-    if (searchParams.get('success') === 'true') {
-      setShowSuccess(true)
+    if (typeof window !== 'undefined') {
+      const urlParams = new URLSearchParams(window.location.search)
+      if (urlParams.get('success') === 'true') {
+        setShowSuccess(true)
+      }
     }
-  }, [searchParams])
+  }, [])
 
   const handleChange = (e) => {
     const { name, value } = e.target

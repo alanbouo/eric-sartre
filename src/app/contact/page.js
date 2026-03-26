@@ -1,8 +1,11 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useSearchParams } from 'next/navigation'
 
 export default function ContactPage() {
+  const searchParams = useSearchParams()
+  const [showSuccess, setShowSuccess] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -10,6 +13,12 @@ export default function ContactPage() {
     subject: '',
     message: '',
   })
+
+  useEffect(() => {
+    if (searchParams.get('success') === 'true') {
+      setShowSuccess(true)
+    }
+  }, [searchParams])
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -125,6 +134,18 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div>
               <h2 className="font-heading text-xl text-primary mb-6">Formulaire de contact</h2>
+              
+              {showSuccess && (
+                <div className="bg-eco-light/20 border border-eco rounded-lg p-6 mb-6 text-center">
+                  <svg className="w-12 h-12 mx-auto mb-3 text-eco" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <h3 className="font-heading text-lg text-primary mb-2">Message envoyé !</h3>
+                  <p className="text-text-light text-sm">
+                    Merci pour votre message. Je vous répondrai dans les meilleurs délais.
+                  </p>
+                </div>
+              )}
               
               <form 
                 action="https://usebasin.com/f/5fcab826c145"
